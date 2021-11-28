@@ -1,0 +1,15 @@
+version: '1'
+services:
+  as:
+    container_name: database
+    image: "aerospike/aerospike-server:latest"
+    ports:
+      - "3000:3000"
+  searchapp:
+    image: "testaerospike:1"
+    build:
+      ./
+    ports:
+      - "8088:8080"
+    depends_on:
+      - as
