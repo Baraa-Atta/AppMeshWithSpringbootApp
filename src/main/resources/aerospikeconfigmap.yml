@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aeroconfig
+  namespace: my-apps
+data:
+  url: 10.108.112.54
